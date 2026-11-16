@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Jones Brickwork | Builders & Bricklayers in Tamworth</title>
+    <meta name="description" content="Professional brickwork, property extensions, general building and property maintenance services in Tamworth and surrounding areas. Quality craftsmanship guaranteed.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0f172a',
+                            dark: '#090d16',
+                            light: '#1e293b'
+                        },
+                        charcoal: '#18181b',
+                        orange: {
+                            DEFAULT: '#f97316',
+                            dark: '#ea580c',
+                            light: '#fb923c'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "M Jones Brickwork",
+      "image": "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80",
+      "@id": "",
+      "url": "",
+      "telephone": "+447877738434",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "238 Kettlebrook Road",
+        "addressLocality": "Tamworth",
+        "postalCode": "B77 1AX",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.6284,
+        "longitude": -1.6934
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "2"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-orange selection:text-white">
+
+    <!-- Sticky Navigation (Top bar completely removed as requested) -->
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur-md shadow-lg border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-orange rounded-lg flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+                        MJ
+                    </div>
+                    <div>
+                        <span class="text-white font-extrabold text-lg sm:text-xl tracking-tight block">M JONES <span class="text-orange">BRICKWORK</span></span>
+                        <span class="text-slate-400 text-xs tracking-wider uppercase block">Tamworth Builders</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-white font-medium hover:text-orange transition-colors">Home</a>
+                    <a href="#about" class="text-slate-300 font-medium hover:text-orange transition-colors">About Us</a>
+                    <a href="#services" class="text-slate-300 font-medium hover:text-orange transition-colors">Services</a>
+                    <a href="#portfolio" class="text-slate-300 font-medium hover:text-orange transition-colors">Our Work</a>
+                    <a href="#reviews" class="text-slate-300 font-medium hover:text-orange transition-colors">Reviews</a>
+                    <a href="#contact" class="text-slate-300 font-medium hover:text-orange transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button & Day/Night Toggle -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <!-- Day / Night Theme Toggle Switch -->
+                    <button id="theme-toggle" onclick="toggleTheme()" class="w-10 h-10 rounded-lg bg-slate-800 text-orange flex items-center justify-center hover:bg-slate-700 transition-colors shadow-inner" aria-label="Toggle Theme">
+                        <i id="theme-icon" class="fa-solid fa-moon text-lg"></i>
+                    </button>
+
+                    <a href="#quote" class="bg-orange hover:bg-orange-dark text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-orange/30 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                        GET A FREE QUOTE
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-dark border-t border-slate-800 px-4 pt-4 pb-6 space-y-3">
+            <a href="#home" class="block text-white font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">Home</a>
+            <a href="#about" class="block text-slate-300 font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">About Us</a>
+            <a href="#services" class="block text-slate-300 font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">Services</a>
+            <a href="#portfolio" class="block text-slate-300 font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">Our Work</a>
+            <a href="#reviews" class="block text-slate-300 font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">Reviews</a>
+            <a href="#contact" class="block text-slate-300 font-medium py-2 px-3 rounded hover:bg-slate-800 transition-colors mobile-link">Contact</a>
+            <div class="pt-2 flex items-center justify-between">
+                <button onclick="toggleTheme()" class="flex items-center gap-2 text-slate-300 text-sm font-medium py-2 px-3 rounded bg-slate-800">
+                    <i id="mobile-theme-icon" class="fa-solid fa-moon text-orange"></i> Toggle Theme
+                </button>
+                <a href="#quote" class="bg-orange hover:bg-orange-dark text-white font-semibold px-5 py-2.5 rounded-lg shadow-md mobile-link text-sm">
+                    GET A FREE QUOTE
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Dynamic Animated Slideshow Background -->
+    <section id="home" class="relative h-screen min-h-[650px] flex items-center justify-center overflow-hidden">
+        <!-- Background Slideshow / Video Carousel with Animation -->
+        <div class="absolute inset-0 z-0">
+            <!-- Slide 1: Construction Video -->
+            <div class="absolute inset-0 bg-hero-slide opacity-100 transition-opacity duration-1000" id="slide-0">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover scale-105 animate-pulse duration-[10000ms]">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-bricklayers-working-on-a-construction-site-41584-large.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Slide 2: Garden Wall Image with Ken Burns Zoom Effect -->
+            <div class="absolute inset-0 bg-hero-slide opacity-0 transition-opacity duration-1000" id="slide-1">
+                <img src="https://images.pexels.com/photos/39761518/pexels-photo-39761518.jpeg" alt="Garden Wall" class="w-full h-full object-cover transform scale-100 animate-kenburns">
+            </div>
+            <!-- Slide 3: Property Maintenance / Renovation Image with Zoom Effect -->
+            <div class="absolute inset-0 bg-hero-slide opacity-0 transition-opacity duration-1000" id="slide-2">
+                <img src="https://images.pexels.com/photos/4567374/pexels-photo-4567374.jpeg" alt="Property Maintenance" class="w-full h-full object-cover transform scale-100 animate-kenburns">
+            </div>
+
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/80 to-navy-dark/70"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
+            <div class="inline-block bg-orange/20 border border-orange/40 text-orange-light text-xs sm:text-sm font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm animate-bounce">
+                Tamworth's Premier Construction & Brickwork Specialists
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight animate-fade-in">
+                M JONES BRICKWORK<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange to-amber-400">"Professional Brickwork & Building Services in Tamworth"</span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-300 mb-8 leading-relaxed font-light">
+                From quality brickwork and property extensions to general building and maintenance, M Jones Brickwork delivers reliable workmanship and practical building solutions for residential properties throughout Tamworth and surrounding areas.
+            </p>
+
+            <div class="text-orange font-semibold tracking-widest text-sm sm:text-base uppercase mb-10 bg-black/40 inline-block px-6 py-2 rounded-lg border border-white/10 backdrop-blur-md shadow-xl">
+                QUALITY BRICKWORK. RELIABLE BUILDING. LASTING RESULTS.
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+                <a href="#quote" class="w-full sm:w-auto bg-orange hover:bg-orange-dark text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-orange/40 transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-file-invoice-dollar"></i> REQUEST A FREE QUOTE
+                </a>
+                <a href="tel:+447877738434" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-white font-bold px-8 py-4 rounded-xl border border-slate-600 backdrop-blur-sm transition-all duration-300 text-center flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone-volume text-orange"></i> CALL US TODAY
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 hidden sm:flex flex-col items-center text-slate-400">
+            <span class="text-xs uppercase tracking-widest mb-2">Scroll Down</span>
+            <div class="w-6 h-10 border-2 border-slate-400/60 rounded-full flex justify-center pt-1">
+                <div class="w-1.5 h-3 bg-orange rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom CSS Animation Styles -->
+    <style>
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+        .animate-kenburns {
+            animation: kenburns 12s infinite alternate ease-in-out;
+        }
+    </style>
+
+    <!-- Trust & Stats Bar -->
+    <section class="bg-orange py-8 text-white relative z-20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="border-r border-orange-dark/40 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold mb-1">5.0 / 5</div>
+                    <div class="text-orange-100 text-xs sm:text-sm font-medium">Google Business Rating</div>
+                </div>
+                <div class="border-r border-orange-dark/40 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold mb-1">100%</div>
+                    <div class="text-orange-100 text-xs sm:text-sm font-medium">Reliable Workmanship</div>
+                </div>
+                <div class="border-r border-orange-dark/40 last:border-0">
+                    <div class="text-3xl sm:text-4xl font-extrabold mb-1">Tamworth</div>
+                    <div class="text-orange-100 text-xs sm:text-sm font-medium">& Surrounding Areas</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold mb-1">Free</div>
+                    <div class="text-orange-100 text-xs sm:text-sm font-medium">Quotations & Advice</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white theme-bg-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Image Sliding Carousel Column -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white h-[450px] bg-slate-200">
+                        <!-- Slide 1 -->
+                        <div class="absolute inset-0 about-slide opacity-100 transition-opacity duration-1000">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f86f7?auto=format&fit=crop&w=1000&q=80" alt="Professional bricklayer working on a residential building" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1000x800/0f172a/f97316?text=M+Jones+Brickwork'">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="absolute inset-0 about-slide opacity-0 transition-opacity duration-1000">
+                            <img src="https://images.pexels.com/photos/32913797/pexels-photo-32913797.jpeg" alt="Brickwork and Bricklaying" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1000x800/0f172a/f97316?text=Precision+Brickwork'">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="absolute inset-0 about-slide opacity-0 transition-opacity duration-1000">
+                            <img src="https://images.pexels.com/photos/39761518/pexels-photo-39761518.jpeg" alt="Garden Wall" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1000x800/0f172a/f97316?text=Garden+Wall+Construction'">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="absolute inset-0 about-slide opacity-0 transition-opacity duration-1000">
+                            <img src="https://images.pexels.com/photos/4567374/pexels-photo-4567374.jpeg" alt="Property Maintenance" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1000x800/0f172a/f97316?text=Property+Maintenance'">
+                        </div>
+                    </div>
+                    <!-- Absolute Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-navy text-white p-6 rounded-2xl shadow-xl hidden sm:block border-l-4 border-orange">
+                        <div class="text-2xl font-black text-orange mb-1">Expert Craft</div>
+                        <div class="text-xs text-slate-300">Precision Brickwork & Building</div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="lg:col-span-6">
+                    <div class="inline-block bg-orange/10 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-4">
+                        Established Local Specialists
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy theme-text-heading mb-6 tracking-tight">
+                        About M Jones Brickwork
+                    </h2>
+                    <p class="text-slate-600 theme-text-body text-base sm:text-lg mb-6 leading-relaxed">
+                        M Jones Brickwork is a building and construction business based in Tamworth, United Kingdom, specialising in brickwork, property extensions, general building work and maintenance services.
+                    </p>
+                    <p class="text-slate-600 theme-text-body text-base mb-6 leading-relaxed">
+                        With a strong focus on quality craftsmanship and customer satisfaction, we aim to provide reliable building solutions tailored to each customer's requirements. Whether you need a professionally constructed garden wall, a property extension, brickwork improvements or general building maintenance, we are committed to delivering quality results.
+                    </p>
+                    <div class="bg-slate-50 theme-card-bg p-6 rounded-xl border-l-4 border-orange mb-8 shadow-sm">
+                        <p class="text-navy theme-text-heading font-semibold italic text-base">
+                            "Our approach is simple: reliable service, attention to detail and workmanship you can be proud of."
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#quote" class="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md">
+                            Enquire Today
+                        </a>
+                        <a href="tel:+447877738434" class="border-2 border-slate-300 hover:border-orange text-navy theme-text-heading font-semibold px-6 py-3 rounded-lg transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-orange"></i> +44 7877 738434
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-orange/10 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block">What We Do</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-4">Our Professional Services</h2>
+                <p class="text-slate-600 text-base sm:text-lg">Comprehensive brickwork and construction solutions tailored for residential properties in Tamworth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group border border-slate-200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/32913797/pexels-photo-32913797.jpeg" alt="Brickwork and Bricklaying" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-orange text-white text-xs font-bold px-2.5 py-1 rounded">SERVICE 01</span>
+                            <h3 class="text-xl font-bold mt-1">Brickwork</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-slate-600 text-sm mb-4">Professional bricklaying and brickwork services for residential properties.</p>
+                            <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Garden walls</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Residential brickwork</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> New-build brickwork</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Brickwork improvements</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> General bricklaying projects</li>
+                            </ul>
+                        </div>
+                        <a href="#quote" onclick="setService('Brickwork')" class="w-full bg-slate-100 hover:bg-orange hover:text-white text-navy font-semibold py-3 rounded-xl transition-all text-center block text-sm">
+                            Request Quote <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group border border-slate-200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Property Extensions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-orange text-white text-xs font-bold px-2.5 py-1 rounded">SERVICE 02</span>
+                            <h3 class="text-xl font-bold mt-1">Property Extensions</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-slate-600 text-sm mb-4">Professional residential extension building services designed to expand your living space.</p>
+                            <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Single & multi-storey extensions</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Additional living spaces</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Structural wall integration</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Property value enhancement</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Fully planned projects</li>
+                            </ul>
+                        </div>
+                        <a href="#quote" onclick="setService('Property Extensions')" class="w-full bg-slate-100 hover:bg-orange hover:text-white text-navy font-semibold py-3 rounded-xl transition-all text-center block text-sm">
+                            Request Quote <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group border border-slate-200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/39737474/pexels-photo-39737474.jpeg" alt="General Building" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-orange text-white text-xs font-bold px-2.5 py-1 rounded">SERVICE 03</span>
+                            <h3 class="text-xl font-bold mt-1">General Building</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-slate-600 text-sm mb-4">General building services for residential construction and property improvement projects.</p>
+                            <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Smaller building jobs</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Larger residential projects</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Practical building solutions</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Client-focused approach</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> High quality finish</li>
+                            </ul>
+                        </div>
+                        <a href="#quote" onclick="setService('General Building')" class="w-full bg-slate-100 hover:bg-orange hover:text-white text-navy font-semibold py-3 rounded-xl transition-all text-center block text-sm">
+                            Request Quote <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group border border-slate-200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4567374/pexels-photo-4567374.jpeg" alt="Property Maintenance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-orange text-white text-xs font-bold px-2.5 py-1 rounded">SERVICE 04</span>
+                            <h3 class="text-xl font-bold mt-1">Property Maintenance</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-slate-600 text-sm mb-4">Reliable property maintenance and general building maintenance services.</p>
+                            <ul class="space-y-2 text-sm text-slate-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Property repairs</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Maintenance solutions</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Structural upkeep</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Preventative care</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Fast, dependable response</li>
+                            </ul>
+                        </div>
+                        <a href="#quote" onclick="setService('Property Maintenance')" class="w-full bg-slate-100 hover:bg-orange hover:text-white text-navy font-semibold py-3 rounded-xl transition-all text-center block text-sm">
+                            Request Quote <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group border border-slate-200 md:col-span-2 lg:col-span-2">
+                    <div class="relative h-56 md:h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/39761518/pexels-photo-39761518.jpeg" alt="Garden Walls & Exterior Brickwork" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <span class="bg-orange text-white text-xs font-bold px-2.5 py-1 rounded">SERVICE 05</span>
+                            <h3 class="text-xl sm:text-2xl font-bold mt-1">Garden Walls & Exterior Brickwork</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col sm:flex-row justify-between items-center gap-6">
+                        <div class="flex-1">
+                            <p class="text-slate-600 text-sm mb-4">Professional garden wall construction and exterior brickwork services to enhance your outdoor spaces.</p>
+                            <div class="grid grid-cols-2 gap-2 text-sm text-slate-700">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Garden boundary walls</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Retaining walls</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Exterior decorative brickwork</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Pillar & gate posts</div>
+                            </div>
+                        </div>
+                        <a href="#quote" onclick="setService('Garden Walls')" class="w-full sm:w-auto bg-orange hover:bg-orange-dark text-white font-semibold px-8 py-4 rounded-xl transition-all text-center whitespace-nowrap shadow-md">
+                            Request Quote <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose M Jones Brickwork -->
+    <section class="py-20 bg-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-orange/20 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block border border-orange/30">Our Strengths</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Why Choose M Jones Brickwork?</h2>
+                <p class="text-slate-300 text-base sm:text-lg">Dedicated to delivering exceptional construction standards on every single project.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Quality Workmanship</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Meticulous attention to detail and professional bricklaying techniques applied to every project, ensuring superior finishes.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Reliable Building Services</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Dependable, punctual and honest building services. We stick to our schedules and communicate clearly throughout.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Attention to Detail</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">From aligning brick courses to structural integrity, our thorough approach guarantees robust and aesthetically pleasing results.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Residential Building Expertise</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Specialised knowledge in residential house extensions, wall construction, and property improvements in Tamworth.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Customer-Focused Approach</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Tailored building solutions designed around your exact requirements, budget, and property specifications.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-navy-light/80 p-8 rounded-2xl border border-slate-800 hover:border-orange transition-colors group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition-all">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Professional Brickwork Solutions</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Practical, lasting solutions for garden walls, structural repairs, extensions, and general property maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-orange/10 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block">Portfolio</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-4">Our Project Gallery</h2>
+                <p class="text-slate-600 text-base sm:text-lg">Explore examples of our professional bricklaying, garden walls, extensions and property maintenance.</p>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1: Precision Residential Brickwork (Updated with Sonny Sixteen photo) -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.pexels.com/photos/12458357/pexels-photo-12458357.jpeg" alt="Precision Residential Brickwork" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">Brickwork</span>
+                        <h4 class="text-white text-lg font-bold">Precision Residential Brickwork</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="House Extension" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">Extensions</span>
+                        <h4 class="text-white text-lg font-bold">Modern Property Extension</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Garden Wall -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.pexels.com/photos/39761518/pexels-photo-39761518.jpeg" alt="Garden Wall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">Garden Walls</span>
+                        <h4 class="text-white text-lg font-bold">Back Garden Boundary Wall</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="General Building" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">General Building</span>
+                        <h4 class="text-white text-lg font-bold">Residential Construction Project</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5: Property Maintenance -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.pexels.com/photos/39761518/pexels-photo-39761518.jpeg" alt="Property Maintenance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">Maintenance</span>
+                        <h4 class="text-white text-lg font-bold">Property Maintenance & Care</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6: Property Improvements & Repairs (Updated with Brett Jordan photo) -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg h-72">
+                    <img src="https://images.pexels.com/photos/4692281/pexels-photo-4692281.jpeg" alt="Property Improvements & Repairs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-orange text-xs font-bold uppercase tracking-wider">Exterior Brickwork</span>
+                        <h4 class="text-white text-lg font-bold">Property Improvements & Repairs</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-orange/10 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block">Testimonials</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-4">Customer Reviews</h2>
+                
+                <!-- Google Rating Badge -->
+                <div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-2xl shadow-md mt-2 border border-slate-200">
+                    <div class="flex text-amber-400 text-xl">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-extrabold text-navy">5.0 OUT OF 5</div>
+                        <div class="text-xs text-slate-500">Based on 2 Google reviews</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 relative flex flex-col justify-between">
+                    <div class="absolute top-6 right-6 text-orange/20 text-4xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-base sm:text-lg mb-6 leading-relaxed">
+                            "Reliable, reasonably priced and quality workmanship - thanks."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 bg-navy text-orange rounded-full flex items-center justify-center font-bold">
+                            <i class="fa-brands fa-google text-sm"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy text-sm">Verified Google Reviewer</div>
+                            <div class="text-xs text-slate-500">Tamworth Customer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 relative flex flex-col justify-between">
+                    <div class="absolute top-6 right-6 text-orange/20 text-4xl">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-base sm:text-lg mb-6 leading-relaxed">
+                            "Very pleased with the wall he built in my back garden."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 bg-navy text-orange rounded-full flex items-center justify-center font-bold">
+                            <i class="fa-brands fa-google text-sm"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-navy text-sm">Verified Google Reviewer</div>
+                            <div class="text-xs text-slate-500">Tamworth Customer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Google Reviews Button -->
+            <div class="text-center">
+                <a href="https://maps.google.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-xl shadow-md transition-all">
+                    <i class="fa-brands fa-google text-orange"></i> VIEW OUR GOOGLE REVIEWS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request a Free Quote & Contact Section -->
+    <section id="quote" class="py-20 bg-gradient-to-br from-navy via-navy-dark to-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-orange/20 text-orange font-semibold text-xs uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block border border-orange/30">Get in Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Request A Free Quote</h2>
+                        <p class="text-slate-300 text-base mb-8 leading-relaxed">
+                            Looking for a reliable bricklayer or builder in Tamworth? Fill out the form with your project details or contact us directly. We will prepare your enquiry and respond promptly.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange text-white rounded-xl flex items-center justify-center text-xl shrink-0 shadow-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Address</h4>
+                                <p class="text-slate-300 text-sm">238 Kettlebrook Road, Tamworth, B77 1AX, United Kingdom</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange text-white rounded-xl flex items-center justify-center text-xl shrink-0 shadow-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Telephone</h4>
+                                <a href="tel:+447877738434" class="text-orange hover:underline text-sm font-semibold">+44 7877 738434</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange text-white rounded-xl flex items-center justify-center text-xl shrink-0 shadow-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Direct WhatsApp</h4>
+                                <a href="https://wa.me/447877738434" target="_blank" rel="noopener" class="text-emerald-400 hover:underline text-sm font-semibold">+44 7877 738434 (Chat Now)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-navy mb-2">Project Enquiry Form</h3>
+                    <p class="text-slate-500 text-sm mb-6">Complete the details below to send your quotation request directly via WhatsApp.</p>
+
+                    <form id="quote-form" onsubmit="submitToWhatsApp(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Full Name *</label>
+                                <input type="text" id="fname" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors" placeholder="John Smith">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" id="fphone" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors" placeholder="+44 7000 000000">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Email Address</label>
+                                <input type="email" id="femail" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Service Required *</label>
+                                <select id="fservice" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors">
+                                    <option value="">Select a Service</option>
+                                    <option value="Brickwork">Brickwork</option>
+                                    <option value="Property Extensions">Property Extensions</option>
+                                    <option value="General Building">General Building</option>
+                                    <option value="Property Maintenance">Property Maintenance</option>
+                                    <option value="Garden Walls">Garden Walls</option>
+                                    <option value="Other Building Enquiries">Other Building Enquiries</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Property Location / Postcode *</label>
+                            <input type="text" id="flocation" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors" placeholder="e.g. Tamworth, B77">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Project Details *</label>
+                            <textarea id="fdetails" rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors" placeholder="Describe your building or brickwork project requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-orange hover:bg-orange-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-orange/30 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> REQUEST MY FREE QUOTATION
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="contact" class="bg-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-navy">Find Us in Tamworth</h3>
+                <p class="text-slate-600 text-sm">238 Kettlebrook Road, Tamworth, B77 1AX, United Kingdom</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl h-[400px] border-4 border-white">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.824519125357!2d-1.6956277234479595!3d52.62840007191547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870f44391ea2803%3A0x6b0932599723cfb1!2sKettlebrook%20Rd%2C%20Tamworth%20B77%201AX%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-orange rounded-lg flex items-center justify-center text-white font-black text-lg">
+                            MJ
+                        </div>
+                        <span class="text-white font-extrabold text-lg tracking-tight">M JONES <span class="text-orange">BRICKWORK</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Quality Brickwork. Reliable Building. Lasting Results. Professional builders serving Tamworth and surrounding areas.
+                    </p>
+                    <div class="flex items-center gap-3 text-white">
+                        <a href="https://wa.me/447877738434" target="_blank" rel="noopener" class="w-9 h-9 bg-slate-800 hover:bg-orange rounded-lg flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+447877738434" class="w-9 h-9 bg-slate-800 hover:bg-orange rounded-lg flex items-center justify-center transition-colors"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="w-9 h-9 bg-slate-800 hover:bg-orange rounded-lg flex items-center justify-center transition-colors"><i class="fa-solid fa-location-dot"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 border-l-2 border-orange pl-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-orange transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-orange transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-orange transition-colors">Our Work</a></li>
+                        <li><a href="#reviews" class="hover:text-orange transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-orange transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 border-l-2 border-orange pl-3">Our Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-orange transition-colors">Brickwork & Bricklaying</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">Property Extensions</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">General Building</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">Property Maintenance</a></li>
+                        <li><a href="#services" class="hover:text-orange transition-colors">Garden Walls & Exterior</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4 border-l-2 border-orange pl-3">Contact Information</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-orange mt-1"></i>
+                            <span>238 Kettlebrook Road, Tamworth, B77 1AX, United Kingdom</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-orange"></i>
+                            <a href="tel:+447877738434" class="hover:text-orange transition-colors font-semibold">+44 7877 738434</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <a href="https://wa.me/447877738434" target="_blank" rel="noopener" class="hover:text-orange transition-colors">WhatsApp Enquiry</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; 2026 M Jones Brickwork. All Rights Reserved. Built for excellence in Tamworth.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447877738434?text=Hello%20M%20Jones%20Brickwork,%20I%20found%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20building%20and%20brickwork%20services.%20Could%20you%20please%20provide%20me%20with%20more%20information%20and%20a%20quotation?" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Chat on WhatsApp"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all duration-300 animate-bounce">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Hero Background Slideshow Animation Script
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.bg-hero-slide');
+        
+        function rotateHeroSlides() {
+            if (slides.length > 0) {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }
+        }
+        setInterval(rotateHeroSlides, 6000);
+
+        // About Us Sliding Images Carousel Script
+        let currentAboutSlide = 0;
+        const aboutSlides = document.querySelectorAll('.about-slide');
+
+        function rotateAboutSlides() {
+            if (aboutSlides.length > 0) {
+                aboutSlides[currentAboutSlide].classList.remove('opacity-100');
+                aboutSlides[currentAboutSlide].classList.add('opacity-0');
+
+                currentAboutSlide = (currentAboutSlide + 1) % aboutSlides.length;
+
+                aboutSlides[currentAboutSlide].classList.remove('opacity-0');
+                aboutSlides[currentAboutSlide].classList.add('opacity-100');
+            }
+        }
+        setInterval(rotateAboutSlides, 4500);
+
+        // Day / Night Theme Toggle
+        let isDarkMode = true; // Default theme is dark/navy premium
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+            if (isDarkMode) {
+                body.classList.remove('day-mode');
+                if (themeIcon) themeIcon.className = "fa-solid fa-moon text-lg";
+                if (mobileThemeIcon) mobileThemeIcon.className = "fa-solid fa-moon text-orange";
+            } else {
+                body.classList.add('day-mode');
+                if (themeIcon) themeIcon.className = "fa-solid fa-sun text-lg text-amber-400";
+                if (mobileThemeIcon) mobileThemeIcon.className = "fa-solid fa-sun text-amber-400";
+            }
+        }
+
+        // Set Service in Quote Form dropdown when clicking service card
+        function setService(serviceName) {
+            const selectEl = document.getElementById('fservice');
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value === serviceName) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Form submission to WhatsApp
+        function submitToWhatsApp(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('fname').value.trim();
+            const phone = document.getElementById('fphone').value.trim();
+            const email = document.getElementById('femail').value.trim() || 'Not provided';
+            const service = document.getElementById('fservice').value;
+            const location = document.getElementById('flocation').value.trim();
+            const details = document.getElementById('fdetails').value.trim();
+
+            const message = `*New Quotation Request - M Jones Brickwork*%0A%0A` +
+                            `*Full Name:* ${name}%0A` +
+                            `*Phone:* ${phone}%0A` +
+                            `*Email:* ${email}%0A` +
+                            `*Service Required:* ${service}%0A` +
+                            `*Property Location:* ${location}%0A` +
+                            `*Project Details:* ${details}`;
+
+            const whatsappUrl = `https://wa.me/447877738434?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+    <style>
+        /* Day Mode Custom Styles */
+        body.day-mode {
+            background-color: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
+        body.day-mode #about {
+            background-color: #ffffff !important;
+        }
+        body.day-mode .theme-text-heading {
+            color: #0f172a !important;
+        }
+        body.day-mode .theme-text-body {
+            color: #334155 !important;
+        }
+        body.day-mode .theme-card-bg {
+            background-color: #f8fafc !important;
+        }
+    </style>
+</body>
+</html>
